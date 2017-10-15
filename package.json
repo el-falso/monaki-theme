@@ -1,0 +1,20 @@
+{
+  "name": "monaki-theme",
+  "displayName": "Monaki Theme",
+  "description": "Theme for Aseprite using the Monokai palette",
+  "version": "1.0",
+  "author": { "name": "eL-Falso", "email": "test@test.com", "url": "https://github.com/el-falso/" },
+  "contributors": [
+    {}
+  ],
+  "publisher": "el-falso",
+  "license": "CC-BY-4.0",
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      { "id": "Monaki", "path": "." }
+    ]
+  }
+}
