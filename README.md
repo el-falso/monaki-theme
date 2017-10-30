@@ -7,7 +7,7 @@ This is a dark theme for the pixelart editor **Aseprite** using the Monokai pale
 ![Aseprite Monaki Theme Screenshot 2](https://github.com/el-falso/monaki-theme/blob/gh-pages/screenshots/Screen02.png?raw=true "Screenshot 2")
 
 ## Installation
-1. Download the Extension from [GitHub](https://github.com/el-falso/monaki-theme/releases/latest "Releases &#183; el-falso/monaki-theme")
+1. Download the Extension from [GitHub](https://github.com/el-falso/monaki-theme/releases/latest "Releases &#183; el-falso/monaki-theme") or if you want to support me from [itch.io](https://el-falso.itch.io/monaki-theme "Monaki Theme by eL-Falso")
 2. Navigate to **Edit &#8658; Preferences... &#8658; Extensions**
 3. Click **Add Extension**
 4. Navigate to the downloaded Extension
