@@ -23,6 +23,10 @@
         <dim id="palette_outline_width" value="3" />
         <dim id="color_slider_height" value="14" />
         <dim id="timeline_base_size" value="12" />
+        <dim id="color_bar_buttons_height" value="16" />
+        <dim id="context_bar_height" value="18" />
+        <dim id="brush_type_width" value="16" />
+        <dim id="color_selector_bar_size" value="8" />
     </dimensions>
     <colors>
         <color id="text" value="#fd971f" />
@@ -30,6 +34,7 @@
         <color id="face" value="#272820" />
         <color id="hot_face" value="#faf0e6" />
         <color id="selected" value="#ff5555" />
+        <color id="selected_text" value="#ffffff" />
         <color id="separator_label" value="#fd971f" />
         <color id="background" value="#272820" />
         <color id="textbox_text" value="#fd971f" />
@@ -91,6 +96,7 @@
         <color id="timeline_active_hover_text" value="#f8f8f2" />
         <color id="timeline_clicked" value="#536069" />
         <color id="timeline_clicked_text" value="#f8f8f2" />
+        <color id="timeline_focused_text" value="#ffffff" />
         <color id="timeline_padding" value="#1b1d1e" />
         <color id="timeline_band_highlight" value="#93adbb" />
         <color id="timeline_band_bg" value="#76858e" />
@@ -241,6 +247,7 @@
         <part id="selection_replace" x="176" y="160" w="7" h="7" />
         <part id="selection_add" x="184" y="160" w="7" h="7" />
         <part id="selection_subtract" x="192" y="160" w="7" h="7" />
+        <part id="selection_intersect" x="200" y="160" w="7" h="7" />
         <part id="unpinned" x="192" y="144" w="8" h="8" />
         <part id="pinned" x="200" y="144" w="8" h="8" />
         <part id="drop_down_button_left_normal" x="48" y="32" w1="3" w2="2" w3="3" h1="4" h2="6" h3="6" />
@@ -300,6 +307,7 @@
         <part id="timeline_drop_layer_deco" x="252" y="127" w1="3" w2="1" w3="3" h1="2" h2="1" h3="2" />
         <part id="timeline_drop_frame_deco" x="252" y="120" w1="2" w2="1" w3="2" h1="3" h2="1" h3="3" />
         <part id="timeline_loop_range" x="240" y="132" w1="4" w2="4" w3="4" h1="3" h2="6" h3="3" />
+        <part id="timeline_focused" x="228" y="12" w1="2" w2="8" w3="2" h1="2" h2="8" h3="2" />
         <part id="flag_normal" x="0" y="240" w="16" h="10" />
         <part id="flag_highlight" x="16" y="240" w="16" h="10" />
         <part id="drop_pixels_ok" x="176" y="176" w="7" h="8" />
@@ -393,11 +401,6 @@
         <part id="aseprite_face" x="0" y="272" w="28" h="30" />
         <part id="aseprite_face_mouse" x="28" y="272" w="28" h="30" />
         <part id="aseprite_face_pushed" x="56" y="272" w="28" h="30" />
-        <part id="target_one" x="144" y="224" w="32" h="16" />
-        <part id="target_frames" x="176" y="224" w="32" h="16" />
-        <part id="target_layers" x="208" y="224" w="32" h="16" />
-        <part id="target_frames_layers" x="240" y="224" w="32" h="16" />
-        <part id="Slice" x="0" y="0" w="0" h="0" />
     </parts>
     <styles>
         <style id="box" />
