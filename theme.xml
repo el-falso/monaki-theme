@@ -21,6 +21,7 @@
         <dim id="timeline_tags_area_height" value="4" />
         <dim id="timeline_outline_width" value="2" />
         <dim id="palette_outline_width" value="3" />
+        <dim id="palette_entries_separator" value="1" />
         <dim id="color_slider_height" value="14" />
         <dim id="timeline_base_size" value="12" />
         <dim id="color_bar_buttons_height" value="16" />
@@ -108,6 +109,7 @@
         <color id="select_box_ruler" value="#0000ff" />
         <color id="select_box_grid" value="#64c864" />
         <color id="edit_pal_face" value="#272820" />
+        <color id="palette_entries_separator" value="#000000" />
     </colors>
     <parts>
         <part id="cursor_normal" x="80" y="0" w="16" h="16" focusx="0" focusy="0" />
@@ -191,6 +193,9 @@
         <part id="combobox_arrow_right_disabled" x="131" y="196" w="9" h="9" />
         <part id="newfolder" x="99" y="211" w="9" h="9" />
         <part id="newfolder_selected" x="115" y="211" w="9" h="9" />
+        <part id="list_view" x="96" y="224" w="9" h="9" />
+        <part id="small_icon_view" x="105" y="224" w="9" h="9" />
+        <part id="big_icon_view" x="114" y="224" w="9" h="9" />
         <part id="toolbutton_normal" x="96" y="0" w1="3" w2="10" w3="3" h1="3" h2="9" h3="4" />
         <part id="toolbutton_hot" x="112" y="0" w1="3" w2="10" w3="3" h1="3" h2="9" h3="4" />
         <part id="toolbutton_last" x="96" y="16" w1="3" w2="10" w3="3" h1="3" h2="9" h3="4" />
@@ -239,7 +244,6 @@
         <part id="ani_stop" x="168" y="192" w="5" h="5" />
         <part id="ani_next" x="176" y="192" w="5" h="5" />
         <part id="ani_last" x="184" y="192" w="5" h="5" />
-        <part id="pal_edit" x="144" y="200" w="5" h="5" />
         <part id="pal_sort" x="152" y="200" w="5" h="5" />
         <part id="pal_presets" x="160" y="200" w="5" h="5" />
         <part id="pal_options" x="168" y="200" w="5" h="5" />
@@ -401,6 +405,19 @@
         <part id="aseprite_face" x="0" y="272" w="28" h="30" />
         <part id="aseprite_face_mouse" x="28" y="272" w="28" h="30" />
         <part id="aseprite_face_pushed" x="56" y="272" w="28" h="30" />
+        <part id="icon_aspect_ratio" x="256" y="264" w="10" h="8" />
+        <part id="linear_gradient" x="176" y="208" w="8" h="8" />
+        <part id="radial_gradient" x="184" y="208" w="8" h="8" />
+        <part id="folder_icon_small" x="144" y="272" w="10" h="8" />
+        <part id="folder_icon_big" x="176" y="272" w="32" h="32" />
+        <part id="folder_icon_medium" x="160" y="272" w="16" h="16" />
+        <part id="outline_circle" x="144" y="224" w="13" h="15" />
+        <part id="outline_square" x="160" y="224" w="13" h="15" />
+        <part id="outline_horizontal" x="176" y="224" w="13" h="15" />
+        <part id="outline_vertical" x="192" y="224" w="13" h="15" />
+        <part id="outline_empty_pixel" x="208" y="224" w="5" h="5" />
+        <part id="outline_full_pixel" x="214" y="224" w="5" h="5" />
+        <part id="dynamics" x="176" y="144" w="16" h="16" />
     </parts>
     <styles>
         <style id="box" />
@@ -533,6 +550,7 @@
             <background-border part="button_hot" state="mouse" />
             <background-border part="button_focused" state="focus" />
             <background-border part="button_selected" state="selected" />
+            <background-border part="button_normal" state="mouse disabled" />
             <text color="button_normal_text" />
             <text color="button_hot_text" state="mouse" />
             <text color="button_selected_text" state="selected" />
@@ -620,7 +638,6 @@
             <background color="check_hot_face" state="selected" />
             <icon part="pal_options" />
         </style>
-        <style id="recover_sprites_button" extends="button" border="0" padding="8" />
         <style id="new_frame_button" extends="mini_button" />
         <style id="color_button" extends="mini_button" border="5" font="mini" />
         <style id="splitter">
@@ -639,6 +656,10 @@
             <background color="background" />
             <background-border part="separator_horz" align="middle" />
         </style>
+        <style id="separator_in_view_reverse">
+            <background color="workspace" />
+            <text color="background" x="4" align="left middle" />
+        </style>
         <style id="vertical_separator" border-left="4" border-top="2" border-right="1" border-bottom="2">
             <background-border part="separator_vert" align="center" />
         </style>
@@ -652,6 +673,15 @@
         </style>
         <style id="recent_file_detail" border="2" border-left="0" extends="recent_file">
             <text color="disabled" align="left" x="2" />
+        </style>
+        <style id="recent_file_pin">
+            <background color="background" />
+            <background color="menuitem_hot_face" state="mouse" />
+            <background color="listitem_selected_face" state="selected" />
+            <icon part="unpinned" align="center middle" color="text" />
+            <icon part="unpinned" align="center middle" color="listitem_selected_text" state="selected" />
+            <icon part="pinned" align="center middle" color="text" state="focus" />
+            <icon part="pinned" align="center middle" color="listitem_selected_text" state="focus selected" />
         </style>
         <style id="news_item" border="2">
             <background color="background" />
