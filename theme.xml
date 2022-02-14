@@ -52,6 +52,7 @@
         <color id="radio_hot_face" value="#f92672" />
         <color id="radio_focus_face" value="#c6c6c6" />
         <color id="menuitem_normal_text" value="#e6db74" />
+        <color id="menuitem_disabled_text" value="#202125" />
         <color id="menuitem_normal_face" value="#1b1d1e" />
         <color id="menuitem_hot_text" value="#e6db74" />
         <color id="menuitem_hot_face" value="#f92672" />
@@ -248,6 +249,12 @@
         <part id="pal_presets" x="160" y="200" w="5" h="5" />
         <part id="pal_options" x="168" y="200" w="5" h="5" />
         <part id="pal_resize" x="176" y="200" w="5" h="5" />
+        <part id="debug_continue" x="208" y="240" w="7" h="7" />
+        <part id="debug_pause" x="208" y="247" w="7" h="7" />
+        <part id="debug_step_into" x="222" y="240" w="7" h="7" />
+        <part id="debug_step_over" x="215" y="240" w="7" h="7" />
+        <part id="debug_step_out" x="229" y="240" w="7" h="7" />
+        <part id="debug_breakpoint" x="236" y="240" w="7" h="7" />
         <part id="selection_replace" x="176" y="160" w="7" h="7" />
         <part id="selection_add" x="184" y="160" w="7" h="7" />
         <part id="selection_subtract" x="192" y="160" w="7" h="7" />
@@ -418,6 +425,18 @@
         <part id="outline_empty_pixel" x="208" y="224" w="5" h="5" />
         <part id="outline_full_pixel" x="214" y="224" w="5" h="5" />
         <part id="dynamics" x="176" y="144" w="16" h="16" />
+        <part id="tiles" x="144" y="208" w="6" h="6" />
+        <part id="tiles_manual" x="150" y="208" w="6" h="6" />
+        <part id="tiles_auto" x="156" y="208" w="6" h="6" />
+        <part id="tiles_stack" x="162" y="208" w="6" h="6" />
+        <part id="cursor_skew_n" x="272" y="192" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_s" x="288" y="192" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_sw" x="272" y="208" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_se" x="288" y="208" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_w" x="272" y="176" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_e" x="288" y="176" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_nw" x="272" y="160" w="16" h="16" focusx="8" focusy="8" />
+        <part id="cursor_skew_ne" x="288" y="160" w="16" h="16" focusx="8" focusy="8" />
     </parts>
     <styles>
         <style id="box" />
@@ -722,6 +741,9 @@
         <style id="workspace_tabs">
             <background color="workspace" />
         </style>
+        <style id="workspace_check_box" extends="check_box" padding="4">
+            <text color="workspace_text" align="left middle" x="14" />
+        </style>
         <style id="tab">
             <background part="tab_normal" align="middle" />
             <background part="tab_active" align="middle" state="focus" />
@@ -841,6 +863,11 @@
             <background-border part="timeline_none" state="focus mouse" />
             <background-border part="timeline_none" state="selected" />
         </style>
+        <style id="timeline_tilemap_layer">
+            <icon part="tiles" color="timeline_normal_text" align="left middle" x="4" />
+            <icon part="tiles" color="timeline_active_text" align="left middle" x="4" state="focus" />
+            <icon part="tiles" color="timeline_clicked_text" align="left middle" x="4" state="selected" />
+        </style>
         <style id="timeline_header_frame" extends="timeline_box" font="mini">
             <text color="timeline_normal_text" />
             <text color="timeline_hover_text" state="mouse" />
@@ -956,6 +983,17 @@
             <icon part="aseprite_face" />
             <icon part="aseprite_face_mouse" state="mouse" />
             <icon part="aseprite_face_pushed" state="mouse selected" />
+        </style>
+        <style id="slider" border-top="4" border-bottom="5">
+            <background part="slider_empty" />
+            <background part="slider_empty_focused" state="focus" />
+            <text color="slider_empty_text" align="center middle" />
+            <text color="slider_empty_text" align="center middle" state="focus" y="1" />
+        </style>
+        <style id="mini_slider" extends="slider" font="mini" padding-top="1" padding-bottom="3">
+            <background part="mini_slider_empty" />
+            <text color="slider_empty_text" align="center middle" />
+            <text color="slider_empty_text" align="center middle" state="focus" />
         </style>
     </styles>
 </theme>
